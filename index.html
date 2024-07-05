@@ -6,10 +6,11 @@
     <title>Weather App Project</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <h1>Weather Forecast</h1>
-    <div class="container">
+    <div class="container" data-aos="slide-up">
       <div class="weather-input">
         <h3>Enter a City Name</h3>
         <input class="city-input" type="text" placeholder="E.g., Delhi, Mumbai, Pune">
@@ -26,7 +27,7 @@
             <h6>Humidity: __%</h6>
           </div>
         </div>
-        <div class="days-forecast">
+        <div class="days-forecast" data-aos="slide-up">
           <center><h2>5-Day Forecast</h2></center>
           <ul class="weather-cards">
             <li class="card">
@@ -63,6 +64,15 @@
         </div>
       </div>
     </div>
-    <script src="index.js" defer></script>
+    <footer>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+      AOS.init({
+          offset:150,
+          duration : 2000
+      });
+      </script>
+      <script src="index.js"></script>
+    </footer>
   </body>
 </html>
